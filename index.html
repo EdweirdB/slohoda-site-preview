@@ -165,11 +165,11 @@ nav.scrolled .nav-logo-img{height:132px}
 /* COMMUNITIES */
 .communities{background:var(--white)}
 .community-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.community-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:1;cursor:pointer;transition:all .35s;background:var(--black);color:var(--white);display:flex;align-items:flex-end;padding:22px}
-.community-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#1a1a1a,#000);transition:all .35s}
-.community-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85),transparent 60%);z-index:1}
-.community-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.18)}
-.community-card:hover::before{background:linear-gradient(135deg,var(--red-dark),#1a1a1a)}
+.community-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:1;cursor:pointer;transition:all .35s;background-color:#1a1a1a;background-size:cover;background-position:center;color:var(--white);display:flex;align-items:flex-end;padding:22px}
+.community-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(180,1,1,0) 0%,rgba(0,0,0,0) 100%);transition:all .35s;z-index:1}
+.community-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.35) 35%,rgba(0,0,0,.1) 70%,transparent 100%);z-index:1}
+.community-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.25)}
+.community-card:hover::before{background:linear-gradient(135deg,rgba(180,1,1,.55) 0%,rgba(0,0,0,.2) 100%)}
 .community-card-inner{position:relative;z-index:2}
 .community-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--white)}
 .community-count{font-size:.72rem;color:rgba(255,255,255,.7);margin-top:4px;letter-spacing:.04em}
@@ -530,49 +530,49 @@ footer{background:var(--black);color:rgba(255,255,255,.65);padding:72px 0 36px}
       <p class="section-subtitle">Central New Jersey is not one market — it is dozens of micro-markets, and each one moves differently. Here is where I spend my days.</p>
     </div>
     <div class="community-grid">
-      <a href="https://nicoleslohoda.kw.com/?location=Metuchen+NJ" target="_blank" rel="noopener" class="community-card reveal">
+      <a href="https://nicoleslohoda.kw.com/?location=Metuchen+NJ" target="_blank" rel="noopener" class="community-card reveal" style="background-image:url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=700&amp;q=80')">
         <div class="community-card-inner">
           <div class="community-name">Metuchen</div>
           <div class="community-count">Brainy Borough · Walkable downtown</div>
         </div>
       </a>
-      <a href="https://nicoleslohoda.kw.com/?location=Edison+NJ" target="_blank" rel="noopener" class="community-card reveal">
+      <a href="https://nicoleslohoda.kw.com/?location=Edison+NJ" target="_blank" rel="noopener" class="community-card reveal" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=700&amp;q=80')">
         <div class="community-card-inner">
           <div class="community-name">Edison</div>
           <div class="community-count">Schools · Commuter rail</div>
         </div>
       </a>
-      <a href="https://nicoleslohoda.kw.com/?location=Woodbridge+NJ" target="_blank" rel="noopener" class="community-card reveal">
+      <a href="https://nicoleslohoda.kw.com/?location=Woodbridge+NJ" target="_blank" rel="noopener" class="community-card reveal" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&amp;q=80')">
         <div class="community-card-inner">
           <div class="community-name">Woodbridge Twp</div>
           <div class="community-count">Iselin · Colonia · Fords</div>
         </div>
       </a>
-      <a href="https://nicoleslohoda.kw.com/?location=South+Plainfield+NJ" target="_blank" rel="noopener" class="community-card reveal">
+      <a href="https://nicoleslohoda.kw.com/?location=South+Plainfield+NJ" target="_blank" rel="noopener" class="community-card reveal" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&amp;q=80')">
         <div class="community-card-inner">
           <div class="community-name">South Plainfield</div>
           <div class="community-count">Family neighborhoods</div>
         </div>
       </a>
-      <a href="https://nicoleslohoda.kw.com/?location=Piscataway+NJ" target="_blank" rel="noopener" class="community-card reveal">
+      <a href="https://nicoleslohoda.kw.com/?location=Piscataway+NJ" target="_blank" rel="noopener" class="community-card reveal" style="background-image:url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=700&amp;q=80')">
         <div class="community-card-inner">
           <div class="community-name">Piscataway</div>
           <div class="community-count">Rutgers area · Diversity</div>
         </div>
       </a>
-      <a href="https://nicoleslohoda.kw.com/?location=Scotch+Plains+NJ" target="_blank" rel="noopener" class="community-card reveal">
+      <a href="https://nicoleslohoda.kw.com/?location=Scotch+Plains+NJ" target="_blank" rel="noopener" class="community-card reveal" style="background-image:url('https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=700&amp;q=80')">
         <div class="community-card-inner">
           <div class="community-name">Scotch Plains</div>
           <div class="community-count">Union County · Schools</div>
         </div>
       </a>
-      <a href="https://nicoleslohoda.kw.com/?location=Westfield+NJ" target="_blank" rel="noopener" class="community-card reveal">
+      <a href="https://nicoleslohoda.kw.com/?location=Westfield+NJ" target="_blank" rel="noopener" class="community-card reveal" style="background-image:url('https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12?w=700&amp;q=80')">
         <div class="community-card-inner">
           <div class="community-name">Westfield</div>
           <div class="community-count">Boutique downtown</div>
         </div>
       </a>
-      <a href="https://nicoleslohoda.kw.com/?location=Cranford+NJ" target="_blank" rel="noopener" class="community-card reveal">
+      <a href="https://nicoleslohoda.kw.com/?location=Cranford+NJ" target="_blank" rel="noopener" class="community-card reveal" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&amp;q=80')">
         <div class="community-card-inner">
           <div class="community-name">Cranford</div>
           <div class="community-count">Train town charm</div>
