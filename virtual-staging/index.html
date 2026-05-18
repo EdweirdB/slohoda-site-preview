@@ -49,10 +49,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 nav{position:fixed;top:0;width:100%;z-index:1000;transition:all .4s;padding:18px 0}
 nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:12px 0;box-shadow:0 1px 0 var(--grey-line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px}
-.nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer}
-.nav-logo-mark{width:42px;height:42px;background:var(--red);color:var(--white);font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;display:flex;align-items:center;justify-content:center;border-radius:6px;letter-spacing:-.04em}
-.nav-logo-text{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--black);letter-spacing:.02em;line-height:1.1}
-.nav-logo-text small{display:block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-top:3px}
+.nav-logo{display:flex;align-items:center;cursor:pointer}
+.nav-logo-img{height:81px;width:auto;display:block;transition:height .4s}
+nav.scrolled .nav-logo-img{height:66px}
+@media(max-width:768px){.nav-logo-img{height:66px}nav.scrolled .nav-logo-img{height:57px}}
 .nav-links{display:flex;gap:30px;list-style:none;align-items:center}
 .nav-links a{font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--black);transition:color .3s;position:relative}
 .nav-links a:hover{color:var(--red)}
@@ -203,10 +203,8 @@ nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding
 footer{background:var(--black);color:rgba(255,255,255,.65);padding:72px 0 36px}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
 .footer-brand p{font-size:.9rem;line-height:1.7;max-width:320px;margin-top:14px}
-.footer-logo{display:flex;align-items:center;gap:12px}
-.footer-logo-mark{width:42px;height:42px;background:var(--red);color:var(--white);font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;display:flex;align-items:center;justify-content:center;border-radius:6px}
-.footer-logo-text{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--white);line-height:1.1}
-.footer-logo-text small{display:block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
+.footer-logo{display:inline-flex;align-items:center;background:var(--white);padding:12px 18px;border-radius:12px}
+.footer-logo-img{height:56px;width:auto;display:block}
 .footer-socials{display:flex;gap:10px;margin-top:22px}
 .footer-social{width:38px;height:38px;border-radius:6px;background:rgba(255,255,255,.06);display:inline-flex;align-items:center;justify-content:center;color:rgba(255,255,255,.75);transition:all .3s}
 .footer-social:hover{background:var(--red);color:var(--white)}
@@ -245,8 +243,7 @@ footer{background:var(--black);color:rgba(255,255,255,.65);padding:72px 0 36px}
 <nav id="topnav">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Nicole Slohoda Team home">
-      <span class="nav-logo-mark">NS</span>
-      <span class="nav-logo-text">Nicole Slohoda Team<small>Keller Williams Elite</small></span>
+      <img src="../assets/slohoda-team-logo.png" alt="Nicole Slohoda Team" class="nav-logo-img">
     </a>
     <ul class="nav-links" id="navlinks">
       <li><a href="/#listings">Listings</a></li>
@@ -570,8 +567,7 @@ footer{background:var(--black);color:rgba(255,255,255,.65);padding:72px 0 36px}
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <span class="footer-logo-mark">NS</span>
-          <span class="footer-logo-text">Nicole Slohoda Team<small>Keller Williams Elite</small></span>
+          <img src="../assets/slohoda-team-logo.png" alt="Nicole Slohoda Team" class="footer-logo-img">
         </div>
         <p>Realtor-Associate serving Central New Jersey. Virtual staging and virtual remodeling for agents who want listings that sell.</p>
         <div class="footer-socials">
