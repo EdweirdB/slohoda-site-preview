@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Staging & Remodeling | Nicole Slohoda Team</title>
+<meta name="description" content="Professional virtual staging and virtual remodeling for real estate agents. $15 per photo. Turn vacant or outdated listings into photos that sell. Central NJ.">
+<meta name="theme-color" content="#b40101">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<link rel="canonical" href="https://nicoleslohodateam.com/virtual-staging/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Virtual Staging & Remodeling | Nicole Slohoda">
+<meta property="og:description" content="Transform empty spaces into listings that sell. $15 per photo, fast turnaround.">
+<meta property="og:url" content="https://nicoleslohodateam.com/virtual-staging/">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#b40101;
+  --red-dark:#8a0101;
+  --red-light:#d62828;
+  --black:#000;
+  --grey-dark:#4d4d4d;
+  --grey:#828282;
+  --grey-line:#e5e5e5;
+  --white:#fff;
+  --bg-light:#f7f7f7;
+  --bg-warm:#fafafa;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--black);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.5}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section-pad{padding:96px 0}
+@media(max-width:768px){.section-pad{padding:64px 0}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(180,1,1,.3)}50%{box-shadow:0 0 0 12px rgba(180,1,1,0)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.25,.46,.45,.94),transform .8s cubic-bezier(.25,.46,.45,.94)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* NAV — matches homepage exactly */
+nav{position:fixed;top:0;width:100%;z-index:1000;transition:all .4s;padding:18px 0}
+nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:12px 0;box-shadow:0 1px 0 var(--grey-line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer}
+.nav-logo-mark{width:42px;height:42px;background:var(--red);color:var(--white);font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;display:flex;align-items:center;justify-content:center;border-radius:6px;letter-spacing:-.04em}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--black);letter-spacing:.02em;line-height:1.1}
+.nav-logo-text small{display:block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-top:3px}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--black);transition:color .3s;position:relative}
+.nav-links a:hover{color:var(--red)}
+.nav-links a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:2px;background:var(--red);transition:width .3s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--red)!important;color:var(--white)!important;padding:11px 22px!important;border-radius:100px;font-weight:700!important;transition:all .3s!important}
+.nav-cta:hover{background:var(--red-dark)!important}
+.nav-cta::after{display:none!important}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;z-index:1001;padding:6px}
+.mobile-toggle span{width:24px;height:2px;background:var(--black);transition:all .3s;display:block}
+
+/* BUTTONS — pill, same as homepage */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:var(--white);padding:15px 32px;border-radius:100px;font-size:.88rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:all .3s;border:2px solid var(--red)}
+.btn-primary:hover{background:var(--red-dark);border-color:var(--red-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(180,1,1,.25)}
+.btn-outline-dark{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--black);padding:15px 32px;border-radius:100px;font-size:.88rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--black);transition:all .3s}
+.btn-outline-dark:hover{background:var(--black);color:var(--white)}
+.btn-outline-light{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);padding:15px 32px;border-radius:100px;font-size:.88rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:2px solid rgba(255,255,255,.4);transition:all .3s}
+.btn-outline-light:hover{border-color:var(--white);background:var(--white);color:var(--black)}
+
+/* HERO — white with red accents, matches homepage */
+.hero{min-height:78vh;background:var(--white);position:relative;overflow:hidden;display:flex;align-items:center;color:var(--black);padding:140px 0 70px;border-bottom:1px solid var(--grey-line)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 900px 700px at 92% 45%,rgba(180,1,1,.06) 0%,transparent 65%),radial-gradient(ellipse 600px 400px at 10% 100%,rgba(180,1,1,.03) 0%,transparent 60%);z-index:0}
+.hero .container{position:relative;z-index:3}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:#fff0f0;border:1px solid rgba(180,1,1,.22);padding:8px 18px;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:24px}
+.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--red);border-radius:50%;animation:pulse 2s infinite}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4.2vw,3.6rem);font-weight:500;line-height:1.1;letter-spacing:-.02em;margin-bottom:22px;color:var(--black)}
+.hero h1 em{color:var(--red);font-style:italic}
+.hero-sub{font-size:1.08rem;line-height:1.65;color:var(--grey-dark);margin-bottom:32px;max-width:520px}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+.hero-price-tag{display:inline-flex;flex-direction:column;align-items:flex-start;background:var(--black);color:var(--white);padding:24px 28px;border-radius:14px;margin-bottom:14px}
+.hero-price-tag .price{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1;color:var(--white)}
+.hero-price-tag .price em{color:var(--red-light);font-style:normal}
+.hero-price-tag .price small{font-size:.8rem;color:rgba(255,255,255,.55);font-weight:400;letter-spacing:.04em;margin-left:6px}
+.hero-price-tag .price-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:6px}
+
+/* HERO PREVIEW SLIDER — interactive before/after */
+.hero-preview{position:relative;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.15)}
+.ba-slider{position:relative;width:100%;height:100%;overflow:hidden;cursor:ew-resize;user-select:none}
+.ba-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba-slider .after-wrap{position:absolute;inset:0;overflow:hidden;width:50%}
+.ba-slider .after-wrap img{width:200%;max-width:none}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--white);box-shadow:0 0 0 1px rgba(0,0,0,.2),0 4px 20px rgba(0,0,0,.3);pointer-events:none;z-index:2}
+.ba-handle-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:var(--white);border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;color:var(--red)}
+.ba-label{position:absolute;top:16px;padding:6px 14px;background:rgba(0,0,0,.7);color:var(--white);border-radius:100px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;pointer-events:none;backdrop-filter:blur(4px);z-index:3}
+.ba-label.before{left:16px}
+.ba-label.after{right:16px;background:var(--red)}
+
+/* WHY IT WORKS */
+.why{background:var(--bg-warm)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.why-block h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;color:var(--black);line-height:1.2;margin-bottom:20px}
+.why-block h2 em{color:var(--red);font-style:italic}
+.why-block p{font-size:.98rem;line-height:1.75;color:var(--grey-dark);margin-bottom:16px}
+.why-list{list-style:none;margin-top:18px}
+.why-list li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;font-size:.95rem;color:var(--grey-dark);line-height:1.55}
+.why-list li svg{flex-shrink:0;color:var(--red);margin-top:2px}
+.why-quote{background:var(--white);border-left:4px solid var(--red);padding:32px 36px;border-radius:0 14px 14px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.25rem;color:var(--black);line-height:1.5;box-shadow:0 12px 36px rgba(0,0,0,.05)}
+.why-quote small{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-top:18px;line-height:1.5}
+
+/* SECTION HEADER */
+.section-header{text-align:center;margin-bottom:56px;max-width:720px;margin-left:auto;margin-right:auto}
+.section-eyebrow{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.6rem);font-weight:500;color:var(--black);letter-spacing:-.02em;line-height:1.2}
+.section-title em{color:var(--red);font-style:italic}
+.section-subtitle{font-size:1.02rem;color:var(--grey);margin-top:14px;line-height:1.6}
+
+/* SERVICES — two big cards */
+.services-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.service-2{background:var(--white);border:1px solid var(--grey-line);border-radius:16px;padding:44px 36px;position:relative;overflow:hidden;transition:all .35s}
+.service-2:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.08);border-color:transparent}
+.service-2::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.service-2:hover::before{transform:scaleX(1)}
+.service-2-icon{width:60px;height:60px;background:#fff5f5;border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--red);margin-bottom:24px;transition:all .35s}
+.service-2:hover .service-2-icon{background:var(--red);color:var(--white)}
+.service-2 h3{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:600;color:var(--black);margin-bottom:12px;letter-spacing:-.01em}
+.service-2 .desc{font-size:.95rem;line-height:1.7;color:var(--grey-dark);margin-bottom:22px}
+.service-2 h4{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin:18px 0 10px}
+.service-2-list{list-style:none}
+.service-2-list li{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:.9rem;color:var(--grey-dark)}
+.service-2-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0}
+
+/* PORTFOLIO — before/after grid */
+.portfolio{background:var(--white)}
+.portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.portfolio-item{background:var(--bg-warm);border-radius:16px;overflow:hidden;border:1px solid var(--grey-line);transition:all .35s}
+.portfolio-item:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.08)}
+.portfolio-pair{display:grid;grid-template-columns:1fr 1fr}
+.portfolio-img{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,#f0f0f0,#e5e5e5);overflow:hidden}
+.portfolio-img img{width:100%;height:100%;object-fit:cover;display:block}
+.portfolio-img .ba-tag{position:absolute;top:12px;left:12px;padding:5px 12px;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);border-radius:100px;backdrop-filter:blur(4px)}
+.portfolio-img .ba-tag.before{background:rgba(0,0,0,.7)}
+.portfolio-img .ba-tag.after{background:var(--red)}
+.portfolio-caption{padding:22px 24px;border-top:1px solid var(--grey-line)}
+.portfolio-caption h4{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--black);margin-bottom:4px}
+.portfolio-caption p{font-size:.85rem;color:var(--grey);line-height:1.5}
+
+/* PRICING */
+.pricing{background:var(--black);color:var(--white);position:relative;overflow:hidden}
+.pricing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(180,1,1,.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 80%,rgba(180,1,1,.08) 0%,transparent 60%)}
+.pricing .container{position:relative;z-index:2}
+.pricing .section-header{margin-bottom:48px}
+.pricing .section-title{color:var(--white)}
+.pricing .section-title em{color:var(--red-light)}
+.pricing .section-subtitle{color:rgba(255,255,255,.6)}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:880px;margin:0 auto}
+.price-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:44px 36px;position:relative;backdrop-filter:blur(10px);transition:all .35s}
+.price-card.featured{background:linear-gradient(165deg,rgba(180,1,1,.2),rgba(180,1,1,.05));border:1px solid rgba(180,1,1,.4);transform:scale(1.02)}
+.price-card.featured::before{content:'Best Value';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--red);color:var(--white);padding:5px 16px;border-radius:100px;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.price-card:hover{border-color:var(--red-light)}
+.price-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red-light);margin-bottom:10px}
+.price-title{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:600;color:var(--white);margin-bottom:18px}
+.price-figure{font-family:'Playfair Display',serif;font-size:3.6rem;font-weight:700;line-height:1;color:var(--white);margin-bottom:6px}
+.price-figure span{font-size:1rem;font-weight:400;color:rgba(255,255,255,.5);margin-left:8px}
+.price-desc{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:24px;min-height:42px}
+.price-features{list-style:none;margin-bottom:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
+.price-features li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5}
+.price-features li svg{flex-shrink:0;color:var(--red-light);margin-top:2px}
+.price-cta{width:100%;justify-content:center}
+
+/* AGENT NOTE */
+.agent-note{background:var(--bg-warm)}
+.agent-note-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:center}
+.agent-note-photo{width:100%;max-width:340px;aspect-ratio:4/5;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.12);margin:0 auto}
+.agent-note-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.agent-note h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;color:var(--black);line-height:1.2;margin-bottom:20px}
+.agent-note h2 em{color:var(--red);font-style:italic}
+.agent-note p{font-size:1rem;line-height:1.75;color:var(--grey-dark);margin-bottom:14px}
+.agent-creds{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px;padding-top:24px;border-top:1px solid var(--grey-line)}
+.agent-cred{display:flex;gap:12px;align-items:flex-start;font-size:.88rem;color:var(--grey-dark);line-height:1.5}
+.agent-cred svg{color:var(--red);flex-shrink:0;margin-top:2px}
+.agent-cred strong{color:var(--black);display:block;font-weight:700;font-size:.82rem;letter-spacing:.04em}
+
+/* CTA */
+.cta{background:var(--white);border-top:1px solid var(--grey-line)}
+.cta-inner{text-align:center;max-width:760px;margin:0 auto}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:500;color:var(--black);line-height:1.2;margin-bottom:18px}
+.cta h2 em{color:var(--red);font-style:italic}
+.cta p{font-size:1.05rem;color:var(--grey-dark);line-height:1.7;margin-bottom:32px}
+.cta-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
+.cta-channels{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;padding-top:32px;border-top:1px solid var(--grey-line)}
+.cta-channel{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--grey-dark);transition:color .3s}
+.cta-channel:hover{color:var(--red)}
+.cta-channel svg{color:var(--red)}
+.cta-channel strong{color:var(--black);font-weight:600}
+
+/* FOOTER — matches homepage */
+footer{background:var(--black);color:rgba(255,255,255,.65);padding:72px 0 36px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:.9rem;line-height:1.7;max-width:320px;margin-top:14px}
+.footer-logo{display:flex;align-items:center;gap:12px}
+.footer-logo-mark{width:42px;height:42px;background:var(--red);color:var(--white);font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;display:flex;align-items:center;justify-content:center;border-radius:6px}
+.footer-logo-text{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--white);line-height:1.1}
+.footer-logo-text small{display:block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
+.footer-socials{display:flex;gap:10px;margin-top:22px}
+.footer-social{width:38px;height:38px;border-radius:6px;background:rgba(255,255,255,.06);display:inline-flex;align-items:center;justify-content:center;color:rgba(255,255,255,.75);transition:all .3s}
+.footer-social:hover{background:var(--red);color:var(--white)}
+.footer-col h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--white);margin-bottom:18px}
+.footer-col a{display:block;color:rgba(255,255,255,.5);font-size:.88rem;padding:5px 0;transition:color .3s;line-height:1.5}
+.footer-col a:hover{color:var(--red-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:12px}
+.footer-bottom a{color:var(--red-light)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-grid,.why-grid,.services-2,.portfolio-grid,.pricing-grid,.agent-note-grid{grid-template-columns:1fr;gap:48px}
+  .hero-grid{text-align:center;padding-top:60px}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-buttons{justify-content:center}
+  .hero-price-tag{align-items:center}
+  .price-card.featured{transform:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--black);flex-direction:column;justify-content:center;align-items:center;gap:24px;z-index:999}
+  .nav-links.show{display:flex}
+  .nav-links.show a{color:var(--white)!important;font-size:1.1rem}
+  .mobile-toggle{display:flex}
+  .portfolio-pair{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .ba-handle-grip{width:40px;height:40px}
+  .agent-creds{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV — same as homepage so the brand carries through -->
+<nav id="topnav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Nicole Slohoda Team home">
+      <span class="nav-logo-mark">NS</span>
+      <span class="nav-logo-text">Nicole Slohoda Team<small>Keller Williams Elite</small></span>
+    </a>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="/#listings">Listings</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#communities">Communities</a></li>
+      <li><a href="/virtual-staging/">Virtual Staging</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="mailto:NicoleSsellsNJ@gmail.com?subject=Virtual%20Staging%20Quote" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobiletoggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Virtual Staging &amp; Remodeling</span>
+        <h1>Transform empty spaces into <em>listings that sell.</em></h1>
+        <p class="hero-sub">Today's buyers scroll before they schedule. Your listing photos need to stop the scroll — and empty rooms, outdated finishes, or cluttered spaces make that harder than ever. I help agents bring listings to life with professionally edited photos that buyers can emotionally connect to before they ever step inside.</p>
+        <div class="hero-price-tag">
+          <div class="price"><em>$15</em><small>/ photo</small></div>
+          <div class="price-label">$120 for up to 12 photos · Fast turnaround</div>
+        </div>
+        <div class="hero-buttons">
+          <a href="mailto:NicoleSsellsNJ@gmail.com?subject=Virtual%20Staging%20Quote&body=Hi%20Nicole%2C%0A%0AI%27d%20like%20a%20virtual%20staging%20quote.%20Photos%20attached." class="btn-primary">Send Photos for a Quote</a>
+          <a href="#examples" class="btn-outline-dark">See Before / After</a>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE BEFORE / AFTER SLIDER -->
+      <div class="hero-preview reveal">
+        <div class="ba-slider" id="heroSlider">
+          <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-29-2026-01_24_23-PM.png" alt="Vacant living room before virtual staging" id="baBefore">
+          <div class="after-wrap" id="afterWrap">
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-27-2026-09_24_24-PM.png" alt="Same living room after virtual staging by Nicole Slohoda">
+          </div>
+          <span class="ba-label before">Before</span>
+          <span class="ba-label after">After</span>
+          <div class="ba-handle" id="baHandle">
+            <div class="ba-handle-grip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 3 12 9 6" opacity=".4"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="section-pad why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-block reveal">
+        <h2>Why virtual staging <em>actually works</em></h2>
+        <p>A completely empty room rarely inspires anyone. Virtual staging is not about tricking buyers — it is about helping them see what is possible.</p>
+        <p><strong style="color:var(--black)">For buyers, it:</strong></p>
+        <ul class="why-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Helps them visualize how a space can function</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Communicates room scale and layout</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Creates the emotional connection that drives offers</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Shows the property's full potential, not just its walls</li>
+        </ul>
+        <p style="margin-top:24px"><strong style="color:var(--black)">For agents, it:</strong></p>
+        <ul class="why-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Makes listings stand out in a sea of MLS photos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Generates more clicks, saves, and showing requests</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Creates a stronger first impression on Zillow + Realtor.com</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg> Markets vacant or dated homes far more effectively</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="why-quote">
+          "A completely empty room rarely inspires anyone."
+          <small>Nicole Slohoda · Realtor-Associate</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section-pad" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">What I Offer</span>
+      <h2 class="section-title">Two services, one <em>goal</em>: photos that sell.</h2>
+    </div>
+    <div class="services-2">
+      <div class="service-2 reveal">
+        <div class="service-2-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-4v-7h-6v7H5a2 2 0 0 1-2-2z"/><rect x="9" y="13" width="6" height="6" stroke-width="1.2"/></svg>
+        </div>
+        <h3>Virtual Staging</h3>
+        <p class="desc">Professionally staged furniture and décor added to vacant or sparsely furnished rooms. Modern, mid-century, transitional, or classic — matched to your buyer profile.</p>
+        <h4>Perfect for</h4>
+        <ul class="service-2-list">
+          <li>Vacant single-family homes</li>
+          <li>Investment properties between tenants</li>
+          <li>New construction and spec homes</li>
+          <li>Rental listings that need to stand out</li>
+        </ul>
+      </div>
+      <div class="service-2 reveal">
+        <div class="service-2-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Virtual Remodeling</h3>
+        <p class="desc">Digitally update outdated spaces without lifting a hammer. Buyers see what the home can be — not what it is. Sellers list without renovation costs and delays.</p>
+        <h4>Examples</h4>
+        <ul class="service-2-list">
+          <li>Kitchen remodel concepts (cabinets, counters, backsplash)</li>
+          <li>Bathroom updates (vanity, tile, fixtures)</li>
+          <li>Flooring replacements</li>
+          <li>Paint color changes</li>
+          <li>Exterior refreshes (siding, trim, landscaping)</li>
+          <li>Modern design transformations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO / EXAMPLES -->
+<section class="section-pad portfolio" id="examples">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Real Work</span>
+      <h2 class="section-title">A few <em>before &amp; after</em> examples</h2>
+      <p class="section-subtitle">Every pair below is real work for real listings. Drag the slider above to see the full transformation in one of my favorite hero shots.</p>
+    </div>
+    <div class="portfolio-grid">
+
+      <!-- 1 — Dining Room (virtual staging) -->
+      <div class="portfolio-item reveal">
+        <div class="portfolio-pair">
+          <div class="portfolio-img">
+            <span class="ba-tag before">Before</span>
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-29-2026-01_24_31-PM.png" alt="Vacant dining room before virtual staging">
+          </div>
+          <div class="portfolio-img">
+            <span class="ba-tag after">After</span>
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-27-2026-09_25_29-PM.png" alt="Same dining room after virtual staging — farmhouse table, sage curtains, warm wood">
+          </div>
+        </div>
+        <div class="portfolio-caption">
+          <h4>Dining Room · Empty to Inviting</h4>
+          <p>Farmhouse table, eight chairs, fresh greenery — set up for the family meals buyers want to picture.</p>
+        </div>
+      </div>
+
+      <!-- 2 — Primary Bedroom (virtual remodel + staging) -->
+      <div class="portfolio-item reveal">
+        <div class="portfolio-pair">
+          <div class="portfolio-img">
+            <span class="ba-tag before">Before</span>
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-29-2026-01_25_45-PM.png" alt="Vacant bedroom with dated blue walls and AC unit">
+          </div>
+          <div class="portfolio-img">
+            <span class="ba-tag after">After</span>
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-27-2026-09_26_50-PM.png" alt="Same bedroom virtually remodeled with sage walls and full staging">
+          </div>
+        </div>
+        <div class="portfolio-caption">
+          <h4>Primary Bedroom · Refreshed &amp; Restaged</h4>
+          <p>Walls repainted from dated blue to a calming sage, then staged with a queen platform bed and warm wood accents.</p>
+        </div>
+      </div>
+
+      <!-- 3 — Basement Lounge (virtual staging) -->
+      <div class="portfolio-item reveal">
+        <div class="portfolio-pair">
+          <div class="portfolio-img">
+            <span class="ba-tag before">Before</span>
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-29-2026-01_26_56-PM.png" alt="Empty finished basement before virtual staging">
+          </div>
+          <div class="portfolio-img">
+            <span class="ba-tag after">After</span>
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-27-2026-09_28_21-PM.png" alt="Same basement after virtual staging as a family lounge">
+          </div>
+        </div>
+        <div class="portfolio-caption">
+          <h4>Basement Lounge · Forgotten Space to Family Hangout</h4>
+          <p>A cavernous finished basement turned into the room buyers actually picture their family hanging out in.</p>
+        </div>
+      </div>
+
+      <!-- 4 — Basement Office (virtual remodel + staging) -->
+      <div class="portfolio-item reveal">
+        <div class="portfolio-pair">
+          <div class="portfolio-img">
+            <span class="ba-tag before">Before</span>
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-29-2026-01_29_28-PM.png" alt="Empty basement room with dated orange wallpaper before virtual remodel">
+          </div>
+          <div class="portfolio-img">
+            <span class="ba-tag after">After</span>
+            <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Apr-27-2026-09_29_49-PM.png" alt="Same basement room virtually remodeled into a modern home office">
+          </div>
+        </div>
+        <div class="portfolio-caption">
+          <h4>Basement Office · Wallpaper Out, Work-From-Home In</h4>
+          <p>Dated orange wallpaper swapped for a modern sage accent wall, then staged as the work-from-home office every buyer wants in 2026.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section-pad pricing" id="pricing">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow" style="color:#ff5757">Pricing</span>
+      <h2 class="section-title">Simple, <em>per-photo</em> pricing.</h2>
+      <p class="section-subtitle">No subscriptions. No retainers. No upsells. Fast turnaround on every order.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-eyebrow">Per Photo</div>
+        <h3 class="price-title">Single Photo</h3>
+        <div class="price-figure">$15<span>/ photo</span></div>
+        <p class="price-desc">Best for a quick refresh on one or two key shots — usually the hero or a problem room.</p>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Staging OR remodeling</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Style direction included</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> One revision round</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> MLS-compliant final files</li>
+        </ul>
+        <a href="mailto:NicoleSsellsNJ@gmail.com?subject=Virtual%20Staging%20Quote%20-%20Single%20Photo" class="btn-outline-light price-cta">Start a Single</a>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="price-eyebrow">Full Listing</div>
+        <h3 class="price-title">Up to 12 Photos</h3>
+        <div class="price-figure">$120<span>/ bundle</span></div>
+        <p class="price-desc">The whole listing covered — every room a buyer scrolls past on Zillow gets the full treatment.</p>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Up to 12 photos staged or remodeled</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Consistent style across the whole listing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Fast turnaround (rush available)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> One revision round per photo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> MLS-compliant final files</li>
+        </ul>
+        <a href="mailto:NicoleSsellsNJ@gmail.com?subject=Virtual%20Staging%20Quote%20-%20Full%20Listing%20Bundle" class="btn-primary price-cta">Book a Listing Bundle</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT NOTE -->
+<section class="section-pad agent-note">
+  <div class="container">
+    <div class="agent-note-grid">
+      <div class="reveal">
+        <div class="agent-note-photo">
+          <img src="https://nicoleslohodateam.com/wp-content/uploads/2026/05/ChatGPT-Image-Mar-24-2026-06_55_03-PM.png" alt="Nicole Slohoda — Realtor and virtual staging designer" loading="lazy">
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="section-eyebrow">Built for Agents, by an Agent</span>
+        <h2>This is not just photo editing. It is <em>real estate marketing.</em></h2>
+        <p>I am a fellow Realtor-Associate working in Central New Jersey, so I know what actually moves a listing. I understand MLS compliance, buyer psychology, and what makes a thumbnail get tapped on Zillow at 9pm on a Tuesday.</p>
+        <p>When you send me a vacant or dated listing, you are not handing it to a stock graphic designer in another time zone. You are working with someone who has stood in those rooms, written those listing remarks, and watched buyer behavior on the same kinds of homes.</p>
+        <div class="agent-creds">
+          <div class="agent-cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <div><strong>MLS Compliant</strong>All final files clearly labeled per state &amp; local MLS rules.</div>
+          </div>
+          <div class="agent-cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div><strong>Fast Turnaround</strong>Most orders back in 24–48 hours. Rush available.</div>
+          </div>
+          <div class="agent-cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div><strong>Realtor to Realtor</strong>Honest pricing, no contracts, no upsells.</div>
+          </div>
+          <div class="agent-cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <div><strong>Buyer-First Design</strong>Every shot styled to convert scrolls into showings.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-pad cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Ready to elevate your <em>listing photos?</em></h2>
+      <p>Let's turn your listing into something buyers can actually picture themselves living in. Send a few photos and I will quote you the same day.</p>
+      <div class="cta-actions">
+        <a href="mailto:NicoleSsellsNJ@gmail.com?subject=Virtual%20Staging%20Quote&body=Hi%20Nicole%2C%0A%0AI%27d%20like%20to%20get%20a%20virtual%20staging%20quote.%20Photos%20attached." class="btn-primary">Send Photos for a Quote</a>
+        <a href="tel:7324859689" class="btn-outline-dark">Call · 732-485-9689</a>
+      </div>
+      <div class="cta-channels">
+        <a href="mailto:NicoleSsellsNJ@gmail.com" class="cta-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span><strong>Email</strong> NicoleSsellsNJ@gmail.com</span>
+        </a>
+        <a href="https://www.instagram.com/nicoleslohoda.realtor/" target="_blank" rel="noopener" class="cta-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span><strong>DM</strong> @nicoleslohoda.realtor</span>
+        </a>
+        <a href="tel:7324859689" class="cta-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="5" y="2" width="14" height="20" rx="2.5"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <span><strong>Text</strong> 732-485-9689</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER — matches homepage exactly -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="footer-logo-mark">NS</span>
+          <span class="footer-logo-text">Nicole Slohoda Team<small>Keller Williams Elite</small></span>
+        </div>
+        <p>Realtor-Associate serving Central New Jersey. Virtual staging and virtual remodeling for agents who want listings that sell.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/nicoleslohoda.realtor/" target="_blank" rel="noopener" class="footer-social" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/slohodagroup" target="_blank" rel="noopener" class="footer-social" title="Facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99h-2.54V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nicole-slohoda-875295201/" target="_blank" rel="noopener" class="footer-social" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@soldbynicolenj" target="_blank" rel="noopener" class="footer-social" title="YouTube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.12C19.55 3.6 12 3.6 12 3.6s-7.55 0-9.38.48A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.12C4.45 20.4 12 20.4 12 20.4s7.55 0 9.38-.48a3 3 0 0 0 2.12-2.12A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4l6.24 3.6L9.6 15.6z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/#listings">Search Listings</a>
+        <a href="/#about">About Nicole</a>
+        <a href="/#communities">Communities</a>
+        <a href="/virtual-staging/">Virtual Staging</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Virtual Staging</h4>
+        <a href="#examples">Before / After</a>
+        <a href="#services">What I Offer</a>
+        <a href="#pricing">Pricing</a>
+        <a href="mailto:NicoleSsellsNJ@gmail.com?subject=Virtual%20Staging%20Quote">Get a Quote</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:7324859689">Cell · 732-485-9689</a>
+        <a href="tel:7325491998">Office · 732-549-1998</a>
+        <a href="mailto:NicoleSsellsNJ@gmail.com">NicoleSsellsNJ@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr">2026</span> Nicole Slohoda Team · Keller Williams Elite, Realtors · 481 Memorial Pkwy, Metuchen NJ 08840 · NJ Lic #2078986</span>
+      <span><a href="/">← Back to Home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// NAV SCROLL
+var nav = document.getElementById('topnav');
+window.addEventListener('scroll', function(){
+  if (window.scrollY > 40) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// MOBILE NAV
+var toggle = document.getElementById('mobiletoggle');
+var links = document.getElementById('navlinks');
+toggle.addEventListener('click', function(){
+  links.classList.toggle('show');
+  toggle.setAttribute('aria-expanded', links.classList.contains('show'));
+});
+links.addEventListener('click', function(e){
+  if (e.target.tagName === 'A') links.classList.remove('show');
+});
+
+// REVEAL ON SCROLL
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+// BEFORE / AFTER SLIDER
+(function(){
+  var slider = document.getElementById('heroSlider');
+  if (!slider) return;
+  var afterWrap = document.getElementById('afterWrap');
+  var handle = document.getElementById('baHandle');
+  var dragging = false;
+
+  function setPercent(pct){
+    pct = Math.max(0, Math.min(100, pct));
+    afterWrap.style.width = pct + '%';
+    handle.style.left = pct + '%';
+    // keep the after image at correct position so it lines up with before
+    var afterImg = afterWrap.querySelector('img');
+    if (afterImg) afterImg.style.width = (10000 / pct) + '%';
+  }
+
+  function pctFromEvent(e){
+    var rect = slider.getBoundingClientRect();
+    var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    return (x / rect.width) * 100;
+  }
+
+  slider.addEventListener('mousedown', function(e){ dragging = true; setPercent(pctFromEvent(e)); });
+  slider.addEventListener('touchstart', function(e){ dragging = true; setPercent(pctFromEvent(e)); }, {passive:true});
+  window.addEventListener('mousemove', function(e){ if (dragging) setPercent(pctFromEvent(e)); });
+  window.addEventListener('touchmove', function(e){ if (dragging) setPercent(pctFromEvent(e)); }, {passive:true});
+  window.addEventListener('mouseup', function(){ dragging = false; });
+  window.addEventListener('touchend', function(){ dragging = false; });
+
+  // initial state
+  setPercent(50);
+})();
+</script>
+
+</body>
+</html>
