@@ -132,9 +132,11 @@ nav.scrolled .nav-logo-img{height:66px}
 .listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .listing-card{background:var(--white);border-radius:8px;overflow:hidden;border:1px solid var(--grey-line);transition:all .35s;display:block}
 .listing-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.08);border-color:var(--red)}
-.listing-image{width:100%;aspect-ratio:16/10;background:linear-gradient(135deg,#1a1a1a,#000);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.15);font-family:'Playfair Display',serif;font-size:2rem;position:relative}
-.listing-image img{width:100%;height:100%;object-fit:cover}
-.listing-badge{position:absolute;top:14px;left:14px;background:var(--red);color:var(--white);padding:5px 12px;border-radius:4px;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.listing-image{width:100%;aspect-ratio:16/10;background-color:#1a1a1a;background-size:cover;background-position:center;display:flex;align-items:flex-end;justify-content:flex-start;padding:18px;position:relative;overflow:hidden}
+.listing-image::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,0) 60%);pointer-events:none}
+.listing-image img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.listing-badge{position:absolute;top:14px;left:14px;background:var(--red);color:var(--white);padding:5px 12px;border-radius:4px;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;z-index:2}
+.listing-image-tag{position:absolute;bottom:14px;left:14px;color:var(--white);font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;text-shadow:0 2px 12px rgba(0,0,0,.5);z-index:2;line-height:1.2}
 .listing-body{padding:22px}
 .listing-price{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:var(--black);line-height:1.1}
 .listing-address{font-size:.88rem;color:var(--grey-dark);margin-top:6px;line-height:1.4}
@@ -439,9 +441,9 @@ footer{background:var(--black);color:rgba(255,255,255,.65);padding:72px 0 36px}
     -->
     <div class="listing-grid">
       <a href="https://nicoleslohoda.kw.com/" target="_blank" rel="noopener" class="listing-card reveal">
-        <div class="listing-image">
+        <div class="listing-image" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&amp;q=80')">
           <span class="listing-badge">Featured</span>
-          <span>★</span>
+          <span class="listing-image-tag">All Active Homes</span>
         </div>
         <div class="listing-body">
           <div class="listing-price">View on KW</div>
@@ -450,25 +452,25 @@ footer{background:var(--black);color:rgba(255,255,255,.65);padding:72px 0 36px}
         </div>
       </a>
       <a href="https://nicoleslohoda.kw.com/?type=newest" target="_blank" rel="noopener" class="listing-card reveal">
-        <div class="listing-image">
+        <div class="listing-image" style="background-image:url('https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12?w=900&amp;q=80')">
           <span class="listing-badge">New This Week</span>
-          <span>★</span>
+          <span class="listing-image-tag">Just Listed</span>
         </div>
         <div class="listing-body">
-          <div class="listing-price">Just Listed</div>
+          <div class="listing-price">Fresh on Market</div>
           <div class="listing-address">Homes that hit the market in the last 7 days across Central NJ.</div>
           <div class="listing-details"><span>Middlesex</span><span>Union</span></div>
         </div>
       </a>
       <a href="https://nicoleslohoda.kw.com/?type=openhouses" target="_blank" rel="noopener" class="listing-card reveal">
-        <div class="listing-image">
+        <div class="listing-image" style="background-image:url('https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=900&amp;q=80')">
           <span class="listing-badge">Open House</span>
-          <span>★</span>
+          <span class="listing-image-tag">This Weekend</span>
         </div>
         <div class="listing-body">
-          <div class="listing-price">This Weekend</div>
+          <div class="listing-price">Weekend Tours</div>
           <div class="listing-address">Open houses I am hosting or showing this weekend in your area.</div>
-          <div class="listing-details"><span>Sat &amp; Sun</span><span>Tours</span></div>
+          <div class="listing-details"><span>Sat &amp; Sun</span><span>Walk-ins</span></div>
         </div>
       </a>
     </div>
